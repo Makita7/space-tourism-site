@@ -1,22 +1,17 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
+import { RouterView } from "vue-router";
+import NavBar from "./components/NavBar.vue";
 </script>
 
 <template>
   <header>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/destination">destination</RouterLink>
-        <RouterLink to="/crew">crew</RouterLink>
-        <RouterLink to="/technology" >Technology</RouterLink>
-      </nav>
-    </div>
+    <NavBar/>
   </header>
-
   <RouterView />
 </template>
 
 <style scoped>
 
 </style>
+
+<!-- how to make background image change depending on resolution -->
