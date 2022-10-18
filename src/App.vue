@@ -4,14 +4,18 @@ import NavBar from "./components/NavBar.vue";
 </script>
 
 <template>
-  <header>
-    <NavBar/>
-  </header>
-  <RouterView />
+  <body>
+    <header>
+      <NavBar/>
+    </header>
+    <RouterView />
+  </body>
 </template>
 
 <style scoped>
-
+  body{
+    margin: -1rem !important;
+  }
 </style>
 
 <!-- how to make background image change depending on resolution -->

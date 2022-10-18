@@ -56,8 +56,8 @@
     margin-bottom: 0;
   }
   .description{
-    padding: 0 1.1rem;
+    padding: 0 1.8rem;
     font-family: var(--Barlow);
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 </style>
