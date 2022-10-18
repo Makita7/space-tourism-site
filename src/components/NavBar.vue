@@ -24,10 +24,10 @@
                 <img alt="close button" src="../assets/shared/icon-close.svg" @click="!OpenNav" />
             </button>
             <div class="navW">
-                <RouterLink to="/"><b>00</b> Home</RouterLink>
-                <RouterLink to="/destination"><b>01</b> destination</RouterLink>
-                <RouterLink to="/crew"><b>02</b> crew</RouterLink>
-                <RouterLink to="/technology" ><b>04</b> Technology</RouterLink>
+                <RouterLink @click="ToggleNav" to="/"><b>00</b> Home</RouterLink>
+                <RouterLink @click="ToggleNav" to="/destination"><b>01</b> destination</RouterLink>
+                <RouterLink @click="ToggleNav" to="/crew"><b>02</b> crew</RouterLink>
+                <RouterLink @click="ToggleNav" to="/technology" ><b>04</b> Technology</RouterLink>
             </div>
         </nav>
     </header>
