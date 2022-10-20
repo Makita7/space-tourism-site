@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@300;400&family=Bellefair&display=swap');
-/*
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400&family=Barlow+Condensed:wght@300;400&family=Bellefair&display=swap');
+/*Barlow:wght@200
 font-family: 'Barlow', sans-serif;
 font-family: 'Barlow Condensed', sans-serif;
 font-family: 'Bellefair', serif;
@@ -10,8 +10,13 @@ font-family: 'Bellefair', serif;
     --Barlow: 'Barlow', sans-serif;
     --BarlowC: 'Barlow Condensed', sans-serif;
     --Bellfair: 'Bellefair', serif;
+    --inactiveColor: #D0D6F9;
 }
 
 p{
     font-family: 'Barlow', sans-serif;
+}
+
+.flex{
+    display: flex;
 }
