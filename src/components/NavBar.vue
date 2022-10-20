@@ -11,7 +11,7 @@
         {
             name: "destination",
             id: 2,
-            to: "/destination"
+            to: "/moon"
         },
         {
             name: "crew",

@@ -1,5 +1,7 @@
 
 <script setup>
+import { RouterView } from 'vue-router';
+import { ref, watch } from 'vue'
 
 const Destinations = [
     {
@@ -24,6 +26,12 @@ const Destinations = [
     }
 ]
 
+const URL = window.location.href;
+const URLpart = URL.split("/").slice(-1);
+console.log(URLpart)
+const ChangingImg = `../assets/destination/image-${URLpart}.png`;
+
+
 </script>
 
 
@@ -35,6 +43,11 @@ const Destinations = [
                     <p class="num">01</p>
                     <p class="pick">Pick your destination</p>
                 </div>
+                {{URLpart}}
+                <img alt="moon" v-if="URLpart == 'moon'" class="planet" src="@/assets/destination/moon.png" />
+                <img v-else-if="URLpart == 'europa'" class="planet" src="@/assets/destination/europa.png" />
+                <img v-else-if="URLpart == 'titan'" class="planet" src="@/assets/destination/titan.png" />
+                <img v-else class="planet" src="@/assets/destination/mars.png" />
                 <RouterLink class="link" v-for="planets in Destinations" :to="planets.to" :key="planets.id">{{planets.name}}</RouterLink><br/>
                 <div class="centered">
                     <RouterView/>
@@ -48,15 +61,16 @@ const Destinations = [
 <style scoped>
     .destination{
         background-image: url('../assets/destination/background-destination-mobile.jpg') ;
-        background-repeat: no-repeat !important;
+        background-repeat: repeat-y !important;
         background-size: cover;
-        height: 105vh;
+        min-height: 105vh;
         color: white;
     }
     .wrapper{
-        padding-top: 8rem;
+        padding-top: 5rem;
         padding-left: 2rem;
         padding-right: 2rem;
+        padding-bottom: 1rem;
     }
     .num{
         font-family: var(--BarlowC);
@@ -88,6 +102,10 @@ const Destinations = [
         color: white;
         border-bottom: 3px solid rgb(255, 255, 255);
         padding: 0 0.2rem 0.5rem 0.2rem;
+    }
+    .planet{
+        width: 50%;
+        margin: 1rem 0;
     }
     :deep(.centered){
         text-align: center !important;
