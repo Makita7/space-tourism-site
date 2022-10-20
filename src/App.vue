@@ -17,5 +17,3 @@ import NavBar from "./components/NavBar.vue";
     margin: -1rem !important;
   }
 </style>
-
-<!-- how to make background image change depending on resolution -->

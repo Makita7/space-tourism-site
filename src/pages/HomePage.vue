@@ -26,7 +26,7 @@
     background-image: url('../assets/home/background-home-mobile.jpg') ;
     background-repeat: no-repeat !important;
     background-size: cover;
-    height: 100vh;
+    height: 105vh;
   }
   main{
     text-align: center;

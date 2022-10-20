@@ -2,12 +2,33 @@
 <script setup>
     import { RouterLink } from "vue-router";
     import { ref } from 'vue'
+    const navbarData = [
+        {
+            name: "home",
+            id: 1,
+            to: "/"
+        },
+        {
+            name: "destination",
+            id: 2,
+            to: "/destination"
+        },
+        {
+            name: "crew",
+            id: 3,
+            to: "/crew"
+        },
+        {
+            name: "technology",
+            id: 4,
+            to: "/technology"
+        }
+    ]
 
     const OpenNav = ref(false);
     const ToggleNav = () => {
         OpenNav.value = !OpenNav.value;
     }
-
 </script>
 
 
@@ -24,10 +45,7 @@
                 <img alt="close button" src="../assets/shared/icon-close.svg" @click="!OpenNav" />
             </button>
             <div class="navW">
-                <RouterLink @click="ToggleNav" to="/"><b>00</b> Home</RouterLink>
-                <RouterLink @click="ToggleNav" to="/destination"><b>01</b> destination</RouterLink>
-                <RouterLink @click="ToggleNav" to="/crew"><b>02</b> crew</RouterLink>
-                <RouterLink @click="ToggleNav" to="/technology" ><b>04</b> Technology</RouterLink>
+                <RouterLink @click="ToggleNav" v-for="data of navbarData" :key="data.id" :to="data.to"><b>0{{data.id}}</b> {{data.name}}</RouterLink>
             </div>
         </nav>
     </header>
@@ -76,5 +94,8 @@
     }
     .close{
         margin-top: 2rem;
+    }
+    .active-link{
+        font-weight: bold;
     }
 </style>
