@@ -28,8 +28,10 @@ const Destinations = [
 
 const URL = window.location.href;
 const URLpart = URL.split("/").slice(-1);
+const URLpartTwo = URLpart
 console.log(URLpart)
 const ChangingImg = `../assets/destination/image-${URLpart}.png`;
+
 
 
 </script>
@@ -43,14 +45,13 @@ const ChangingImg = `../assets/destination/image-${URLpart}.png`;
                     <p class="num">01</p>
                     <p class="pick">Pick your destination</p>
                 </div>
-                {{URLpart}}
                 <img alt="moon" v-if="URLpart == 'moon'" class="planet" src="@/assets/destination/moon.png" />
                 <img v-else-if="URLpart == 'europa'" class="planet" src="@/assets/destination/europa.png" />
                 <img v-else-if="URLpart == 'titan'" class="planet" src="@/assets/destination/titan.png" />
                 <img v-else class="planet" src="@/assets/destination/mars.png" />
                 <RouterLink class="link" v-for="planets in Destinations" :to="planets.to" :key="planets.id">{{planets.name}}</RouterLink><br/>
                 <div class="centered">
-                    <RouterView/>
+                    <RouterView :key="$route.fullPath" />
                 </div>
             </div>
         </div>
@@ -72,21 +73,6 @@ const ChangingImg = `../assets/destination/image-${URLpart}.png`;
         padding-right: 2rem;
         padding-bottom: 1rem;
     }
-    .num{
-        font-family: var(--BarlowC);
-        font-weight: 400;
-        font-size: 1.2rem;
-        color: rgba(255, 255, 255, 0.25);
-        margin-right: 1rem;
-        letter-spacing: 0.2rem;
-    }
-    .pick{
-        font-family: var(--BarlowC);
-        text-transform: uppercase;
-        font-size: 1.2rem;
-        font-weight: 300;
-        letter-spacing: 0.2rem;
-    }
     .link{
         color: white;
         padding: 0 1rem;
@@ -107,13 +93,9 @@ const ChangingImg = `../assets/destination/image-${URLpart}.png`;
         width: 50%;
         margin: 1rem 0;
     }
-    :deep(.centered){
-        text-align: center !important;
-        justify-content: center;
-    }
 
     :deep(.title){
-        font-size: 4rem;
+        font-size: 3.5rem;
         text-transform: capitalize;
         text-transform: uppercase;
         font-family: var(--Bellfair);
@@ -138,10 +120,6 @@ const ChangingImg = `../assets/destination/image-${URLpart}.png`;
         line-height: 1.7rem;
         margin-bottom: 2rem;
         color: var(--inactiveColor);
-    }
-    :deep(hr){
-        border-color: #545768;
-        border-radius: 4px;
     }
     :deep(.distance){
         font-weight: 500;

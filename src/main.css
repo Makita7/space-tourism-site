@@ -20,3 +20,29 @@ p{
 .flex{
     display: flex;
 }
+
+.num{
+    font-family: var(--BarlowC);
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.25);
+    margin-right: 1rem;
+    letter-spacing: 0.2rem;
+}
+.pick{
+    font-family: var(--BarlowC);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+}
+
+hr{
+    border-color: #545768;
+    border-radius: 4px;
+}
+
+.centered{
+    text-align: center !important;
+    justify-content: center;
+}
