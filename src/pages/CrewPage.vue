@@ -74,7 +74,7 @@
 
 <style scoped>
     .crew{
-        background-image: url('../assets/destination/background-destination-mobile.jpg') ;
+        background-image: url('../assets/crew/background-crew-mobile.jpg') ;
         background-repeat: repeat-y !important;
         background-size: cover;
         min-height: 105vh;
