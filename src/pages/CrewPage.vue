@@ -1,17 +1,9 @@
 <script setup>
-    import CrewNav from '../components/CrewNav.vue';
     import Commander from '../assets/crew/image-douglas-hurley.png';
     import Pilot from '../assets/crew/image-victor-glover.png';
     import MisionSpecialist from '../assets/crew/image-mark-shuttleworth.png';
     import FlightEngineer from '../assets/crew/image-anousheh-ansari.png';
-    import { ref } from 'vue';
-
-    const CurrentIndex = ref(1)
-
-    const GoToSlide = (index) =>{
-        // CurrentIndex = index
-        console.log(index)
-    }
+import TheCommander from './crew/TheCommander.vue';
 
     const Slides = [
         {
@@ -56,17 +48,7 @@
                 <p class="pick">Meet your crew</p>
             </div>
             <div class="slides">
-                <div
-                    v-for="slide in Slides"
-                    :key="slide.id"
-                >
-                    <img :alt="slide.name" :src="slide.img" />
-                    <hr/>
-                    <CrewNav GoToSlide={GoToSlide} />
-                    <p class="position">{{slide.position}}</p>
-                    <p class="name">{{slide.name}}</p>
-                    <p class="description">{{slide.description}}</p>
-                </div>
+                <RouterView :key="$route.fullPath" />
             </div>
         </div>
     </div>

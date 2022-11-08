@@ -41,6 +41,28 @@ const router = createRouter({
       path: "/crew",
       name: "crew",
       component: () => import( /* webpackChunkName: "crew" */ '@/pages/CrewPage.vue'),
+      children: [
+        {
+          path: '/commander',
+          name: 'commander',
+          component: () => import(/* webpackChuckName: "commander" */ '@/pages/crew/TheCommander.vue')
+        },
+        {
+          path: '/missionspecialist',
+          name: 'missionspecialist',
+          component: () => import(/* webpackChuckName: "missionspecialist" */ '@/pages/crew/TheMissionSpecialist.vue')
+        },
+        {
+          path: '/pilot',
+          name: 'pilot',
+          component: () => import(/* webpackChuckName: "pilot" */ '@/pages/crew/ThePilot.vue')
+        },
+        {
+          path: '/flightengineer',
+          name: 'flightengineer',
+          component: () => import(/* webpackChuckName: "flight-engineer" */ '@/pages/crew/TheFlightEngineer.vue')
+        },
+      ]
     },
     {
       path: "/technology",

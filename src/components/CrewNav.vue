@@ -6,16 +6,24 @@
 
 <template>
     <div class="wrapper flex centered">
-        <button @click="GoToSlide" class="active-link" index="1"></button>
-        <button  @click="GoToSlide" index="2" ></button>
-        <button  @click="GoToSlide" index="3" ></button>
-        <button  @click="GoToSlide" index="4" ></button>
+        <RouterLink to="/commander" >
+            <button ></button>
+        </RouterLink>
+        <RouterLink to="/missionspecialist">
+            <button ></button>
+        </RouterLink>
+        <RouterLink to="/pilot" >
+            <button ></button>
+        </RouterLink>
+        <RouterLink to="/flightengineer" >
+            <button ></button>
+        </RouterLink>
     </div>
 </template>
 
 <style scoped>
     .wrapper{
-        margin-top: -2.5rem;
+        margin-top: 1rem;
     }
     button{
         box-sizing: content-box;
@@ -33,7 +41,8 @@
         transition: opacity .6s ease;
         border-radius: 10px !important;
     }
-    .active-link{
+    .active-link button{
         opacity: 1 !important;
+        color: #ffff;
     }
 </style>

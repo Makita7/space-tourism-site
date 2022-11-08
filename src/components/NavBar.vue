@@ -16,7 +16,7 @@
         {
             name: "crew",
             id: 3,
-            to: "/crew"
+            to: "/commander"
         },
         {
             name: "technology",

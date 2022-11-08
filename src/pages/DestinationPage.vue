@@ -26,29 +26,6 @@ const Destinations = [
     }
 ]
 
-let URL = ref(window.location.href);
-URL = URL.value.toString()
-let URLpart = ref(URL.split("/").slice(-1).toString());
-
-
-// console.log(URLpart.value);
-console.log();
-
-// watch(URL, (newPlanet, oldPlanet) => {
-//     URL = URL.value.toString()
-//     let URLpart = ref(URL.split("/").slice(-1).toString());
-//     console.log(newPlanet, oldPlanet);
-//     return URLpart
-// },)
-
-function GetURL(){
-    URL = ref(window.location.href);
-}
-
-watch(() => URLpart.value, (oldPlanet, newPlanet) => {
-    console.log('watching'+ oldPlanet);
-});
-
 </script>
 
 
