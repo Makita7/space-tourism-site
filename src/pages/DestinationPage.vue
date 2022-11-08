@@ -26,13 +26,28 @@ const Destinations = [
     }
 ]
 
-const URL = window.location.href;
-const URLpart = URL.split("/").slice(-1);
-const URLpartTwo = URLpart
-console.log(URLpart)
-const ChangingImg = `../assets/destination/image-${URLpart}.png`;
+let URL = ref(window.location.href);
+URL = URL.value.toString()
+let URLpart = ref(URL.split("/").slice(-1).toString());
 
 
+// console.log(URLpart.value);
+console.log();
+
+// watch(URL, (newPlanet, oldPlanet) => {
+//     URL = URL.value.toString()
+//     let URLpart = ref(URL.split("/").slice(-1).toString());
+//     console.log(newPlanet, oldPlanet);
+//     return URLpart
+// },)
+
+function GetURL(){
+    URL = ref(window.location.href);
+}
+
+watch(() => URLpart.value, (oldPlanet, newPlanet) => {
+    console.log('watching'+ oldPlanet);
+});
 
 </script>
 
@@ -45,11 +60,11 @@ const ChangingImg = `../assets/destination/image-${URLpart}.png`;
                     <p class="num">01</p>
                     <p class="pick">Pick your destination</p>
                 </div>
-                <img alt="moon" v-if="URLpart == 'moon'" class="planet" src="@/assets/destination/moon.png" />
-                <img v-else-if="URLpart == 'europa'" class="planet" src="@/assets/destination/europa.png" />
-                <img v-else-if="URLpart == 'titan'" class="planet" src="@/assets/destination/titan.png" />
-                <img v-else class="planet" src="@/assets/destination/mars.png" />
-                <RouterLink class="link" v-for="planets in Destinations" :to="planets.to" :key="planets.id">{{planets.name}}</RouterLink><br/>
+                <img alt="moon" v-if="$route.fullPath == '/moon'" class="planet" src="@/assets/destination/moon.png" />
+                <img v-else-if="$route.fullPath == '/europa'" class="planet" src="@/assets/destination/europa.png" />
+                <img v-else-if="$route.fullPath == '/titan'" class="planet" src="@/assets/destination/titan.png" />
+                <img v-else-if="$route.fullPath == '/mars'" class="planet" src="@/assets/destination/mars.png" />
+                <RouterLink @click="GetURL" class="link" v-for="planets in Destinations" :to="planets.to" :key="planets.id">{{planets.name}}</RouterLink><br/>
                 <div class="centered">
                     <RouterView :key="$route.fullPath" />
                 </div>
