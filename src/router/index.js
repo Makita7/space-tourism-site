@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "@/pages/HomePage.vue";
 
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -45,22 +44,22 @@ const router = createRouter({
         {
           path: '/commander',
           name: 'commander',
-          component: () => import(/* webpackChuckName: "commander" */ '@/pages/crew/TheCommander.vue')
+          component: () => import(/* webpackChunkName: "commander" */ '@/pages/crew/TheCommander.vue')
         },
         {
           path: '/missionspecialist',
           name: 'missionspecialist',
-          component: () => import(/* webpackChuckName: "missionspecialist" */ '@/pages/crew/TheMissionSpecialist.vue')
+          component: () => import(/* webpackChunkName: "missionspecialist" */ '@/pages/crew/TheMissionSpecialist.vue')
         },
         {
           path: '/pilot',
           name: 'pilot',
-          component: () => import(/* webpackChuckName: "pilot" */ '@/pages/crew/ThePilot.vue')
+          component: () => import(/* webpackChunkName: "pilot" */ '@/pages/crew/ThePilot.vue')
         },
         {
           path: '/flightengineer',
           name: 'flightengineer',
-          component: () => import(/* webpackChuckName: "flight-engineer" */ '@/pages/crew/TheFlightEngineer.vue')
+          component: () => import(/* webpackChunkName: "flight-engineer" */ '@/pages/crew/TheFlightEngineer.vue')
         },
       ]
     },
@@ -68,6 +67,23 @@ const router = createRouter({
       path: "/technology",
       name: "technology",
       component: () => import( /* webpackChunkName: "tech" */ '@/pages/TechnologyPage.vue'),
+      children: [
+        {
+          path: '/launch_vehicle',
+          name: 'launch_vehicle',
+          component: () => import( /* webpackChunkName: "launch" */ '@/pages/tech/TechLaunchVehicle.vue' )
+        },
+        {
+          path: '/space_capsule',
+          name: 'space_capsule',
+          component: () => import( /* webpackChunkName: "capsule" */ '@pages/tech/TechSpaceCapsule.vue' )
+        },
+        {
+          path: '/space_port',
+          name: 'space_port',
+          component: () => import( /* webpackChunkName: "port" */ '@pages/tech/TechSpaceport.vue' )
+        },
+      ]
     },
   ],
   linkActiveClass: 'active-link',

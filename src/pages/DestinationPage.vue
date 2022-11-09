@@ -41,9 +41,10 @@ const Destinations = [
                 <img v-else-if="$route.fullPath == '/europa'" class="planet" src="@/assets/destination/europa.png" />
                 <img v-else-if="$route.fullPath == '/titan'" class="planet" src="@/assets/destination/titan.png" />
                 <img v-else-if="$route.fullPath == '/mars'" class="planet" src="@/assets/destination/mars.png" />
-                <RouterLink @click="GetURL" class="link" v-for="planets in Destinations" :to="planets.to" :key="planets.id">{{planets.name}}</RouterLink><br/>
+                <RouterLink class="link" v-for="planets in Destinations" :to="planets.to" :key="planets.id">{{planets.name}}</RouterLink>
+                <br/>
                 <div class="centered">
-                    <RouterView :key="$route.fullPath" />
+                    <Router-View :key="$route.fullPath"/>
                 </div>
             </div>
         </div>
@@ -131,4 +132,24 @@ const Destinations = [
         font-weight: 300;
         text-transform: uppercase;
     }
+
+    /* ANIMATIONS */
+    .route-enter-from{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    .route-enter-active{
+        transition: all 0.3s ease-out;
+    }
+    .route-leave-active{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    .route-leave-active{
+        transition: all 0.3s ease-in;
+    }
 </style>
+
+<!-- <router-view :key="$route.fullPath"/> -->
