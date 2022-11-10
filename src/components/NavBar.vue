@@ -1,53 +1,60 @@
 
 <script setup>
     import { RouterLink } from "vue-router";
-    import { ref } from 'vue'
-    const navbarData = [
-        {
-            name: "home",
-            id: 1,
-            to: "/"
-        },
-        {
-            name: "destination",
-            id: 2,
-            to: "/moon"
-        },
-        {
-            name: "crew",
-            id: 3,
-            to: "/commander"
-        },
-        {
-            name: "technology",
-            id: 4,
-            to: "/launchvehicle"
-        }
-    ]
+    import { onMounted, ref, watch } from "vue";
+import NavBarBig from "./NavBarBig.vue";
 
-    const OpenNav = ref(false);
-    const ToggleNav = () => {
-        OpenNav.value = !OpenNav.value;
+    const navbarData = [
+    {
+        name: "home",
+        id: 1,
+        to: "/"
+    },
+    {
+        name: "destination",
+        id: 2,
+        to: "/moon"
+    },
+    {
+        name: "crew",
+        id: 3,
+        to: "/commander"
+    },
+    {
+        name: "technology",
+        id: 4,
+        to: "/launchvehicle"
     }
+]
+
+const OpenNav = ref(false);
+
+const ToggleNavCel = () => {
+    OpenNav.value = !OpenNav.value;
+}
+
 </script>
 
 
 <template>
-    <header>
+    <header class="">
         <RouterLink to="/">
-            <img class="logo" alt="logo" src='../assets/shared/logo.svg' />
+            <img class="logo OnlyCel" alt="logo" src='../assets/shared/logo.svg' />
         </RouterLink>
-        <button @click="ToggleNav">
-            <img alt="menu icon" src='../assets/shared/icon-hamburger.svg'  />
-        </button>
-        <nav v-if="OpenNav">
-            <button class="close" @click="ToggleNav" >
-                <img alt="close button" src="../assets/shared/icon-close.svg" @click="!OpenNav" />
+        <div  class="OnlyCel">
+            <button @click="ToggleNavCel">
+                <img alt="menu icon" src='../assets/shared/icon-hamburger.svg'  />
             </button>
-            <div class="navW">
-                <RouterLink @click="ToggleNav" v-for="data of navbarData" :key="data.id" :to="data.to"><b>0{{data.id}}</b> {{data.name}}</RouterLink>
-            </div>
-        </nav>
+            <nav v-if="OpenNav" class="navCel">
+                <button class="close" v-on:click="ToggleNavCel" >
+                    <img alt="close button" src="../assets/shared/icon-close.svg" @click="!OpenNav" />
+                </button>
+                <div class="navW">
+                    <RouterLink @click="ToggleNavCel" v-for="data of navbarData" :key="data.id" :to="data.to"><b>0{{data.id}}</b> {{data.name}}</RouterLink>
+                </div>
+            </nav>
+        </div>
+        <NavBarBig/>
     </header>
 </template>
 
@@ -62,14 +69,14 @@
         background-color: rgba(240, 248, 255, 0);
         border: 0px;
         margin-right: 2rem;
-        margin-top: 0.7rem;
+        margin-top: -2rem;
         float: right;
     }
     .logo{
         margin-left: 1.5rem;
     }
-    /* cellphone nav make a sub component */
-    nav {
+
+    .navCel {
         height: 100vh;
         width: 65%;
         background-color: rgb(255 255 255 / 4%);
@@ -77,13 +84,15 @@
         position: fixed;
         top: 0;
         right: 0;
+        float: right;
+        z-index: +6;
     }
     .navW{
         display: grid;
         margin: 2rem;
         margin-top: 6rem;
     }
-    nav a{
+    .navCel a{
         font-family: var(--BarlowC);
         color: white;
         padding-bottom: 1.5rem;
@@ -98,4 +107,15 @@
     .active-link{
         font-weight: bold;
     }
+
+    .OnlyCel{
+        content-visibility: hidden;
+    }
+
+    @media(max-width: 800px){
+        .OnlyCel{
+        content-visibility: visible;
+        }
+    }
+
 </style>

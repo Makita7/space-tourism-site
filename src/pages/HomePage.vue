@@ -50,16 +50,37 @@
     font-size: 5rem;
     text-transform: uppercase;
     margin: 2rem 0rem;
+    font-weight: 300;
   }
   .topP{
     font-family: var(--BarlowC);
     font-size: 1.3rem;
     font-weight: 300;
     margin-bottom: 0;
+    color: #D0D6F9;
   }
   .description{
     padding: 0 1.8rem;
     font-family: var(--Barlow);
     margin-bottom: 3rem;
+    color: #D0D6F9;
+  }
+
+
+  @media(min-width: 800px) {
+    .description{
+      padding: 0 9.8rem;
+      line-height: 2rem;
+      font-size: 1.2rem;
+    }
+    h1{
+      font-size: 10rem;
+      font-weight: 300;
+    }
+    button{
+      margin-top: 6rem;
+      padding: 6rem 2.5rem;
+      font-size: 2.3rem;
+    }
   }
 </style>

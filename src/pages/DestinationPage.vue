@@ -84,7 +84,7 @@ const Destinations = ref([
     }
     .planet{
         width: 50%;
-        margin: 1rem 0;
+        margin: 1rem 25%;
     }
 
     :deep(.title){
