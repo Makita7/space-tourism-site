@@ -53,7 +53,7 @@
     .wrapper a{
         color: white;
         text-decoration: none;
-        padding-left: 5rem;
+        padding-left: 3rem;
         margin-top: -1rem;
         font-family: 'Barlow Condensed', sans-serif;
         text-transform: uppercase;

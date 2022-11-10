@@ -82,5 +82,11 @@
       padding: 6rem 2.5rem;
       font-size: 2.3rem;
     }
+    .home{
+      background-image: url('../assets/home/background-home-tablet.jpg') ;
+    }
+    .topP{
+      padding-top: 2rem;
+    }
   }
 </style>
