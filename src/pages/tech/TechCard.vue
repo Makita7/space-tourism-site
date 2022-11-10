@@ -1,7 +1,7 @@
 
 
 <script setup>
-
+    import TechNav from './TechNav.vue';
     defineProps({
         title: String,
         img: String,
@@ -12,7 +12,7 @@
 <template>
     <div class="card">
         <img :alt="title" :src="img" />
-        <p>buttons</p>
+        <TechNav/>
         <p class="term">THE TERMINOLOGY…</p>
         <p class="title">{{title}}</p>
         <p class="description">{{description}}</p>

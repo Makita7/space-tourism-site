@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "@/pages/HomePage.vue";
+import TechVehicle from '@/pages/tech/TechLaunchVehicle.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -69,19 +70,19 @@ const router = createRouter({
       component: () => import( /* webpackChunkName: "tech" */ '@/pages/TechnologyPage.vue'),
       children: [
         {
-          path: '/launch_vehicle',
+          path: '/launchvehicle',
           name: 'launch_vehicle',
-          component: () => import( /* webpackChunkName: "launch" */ '@/pages/tech/TechLaunchVehicle.vue' )
+          component: () => import( /* webpackChunkName: "vehicle" */ '@/pages/tech/TechLaunchVehicle.vue'),
         },
         {
-          path: '/space_capsule',
+          path: '/spacecapsule',
           name: 'space_capsule',
-          component: () => import( /* webpackChunkName: "capsule" */ '@pages/tech/TechSpaceCapsule.vue' )
+          component: () => import( /* webpackChunkName: "capsule" */ '@/pages/tech/TechSpaceCapsule.vue'),
         },
         {
-          path: '/space_port',
+          path: '/spaceport',
           name: 'space_port',
-          component: () => import( /* webpackChunkName: "port" */ '@pages/tech/TechSpaceport.vue' )
+          component: () => import( /* webpackChunkName: "port" */ '@/pages/tech/TechSpaceport.vue'),
         },
       ]
     },

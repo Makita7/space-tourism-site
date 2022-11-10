@@ -13,11 +13,7 @@ import { RouterView } from 'vue-router';
           <p class="num">03</p>
           <p class="pick">SPACE LAUNCH 101</p>
       </div>
-      <RouterView v-slot="{ Component }">
-        <transition name="route" mode="out-in">
-          <component :is="Component" />
-        </transition>
-      </RouterView>
+      <RouterView/>
     </div>
   </div>
 </template>

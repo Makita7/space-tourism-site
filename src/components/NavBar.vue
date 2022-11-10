@@ -21,7 +21,7 @@
         {
             name: "technology",
             id: 4,
-            to: "/technology"
+            to: "/launchvehicle"
         }
     ]
 
