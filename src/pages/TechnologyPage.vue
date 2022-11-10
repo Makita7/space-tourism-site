@@ -13,7 +13,11 @@ import { RouterView } from 'vue-router';
           <p class="num">03</p>
           <p class="pick">SPACE LAUNCH 101</p>
       </div>
-      <RouterView/>
+      <router-view  v-slot="{ Component }" >
+          <transition name="route" mode="out-in">
+              <component :is="Component"/>
+          </transition>
+      </router-view>
     </div>
   </div>
 </template>
@@ -36,7 +40,6 @@ import { RouterView } from 'vue-router';
   /* ANIMATIONS */
   .route-enter-from{
       opacity: 0;
-      transform: translateX(100px);
   }
 
   .route-enter-active{
@@ -44,7 +47,6 @@ import { RouterView } from 'vue-router';
   }
   .route-leave-active{
       opacity: 0;
-      transform: translateX(-100px);
   }
 
   .route-leave-active{
