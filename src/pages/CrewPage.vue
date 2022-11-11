@@ -101,4 +101,20 @@
             margin-left: 1rem;
         }
     }
+    @media(min-width: 1200px){
+        .crew{
+            background-image: url('../assets/crew/background-crew-desktop.jpg');
+        }
+        .num{
+            font-size: 1.6rem;
+        }
+        .pick{
+            font-size: 1.6rem;
+            letter-spacing: 3px;
+        }
+        .padTablet{
+            margin-top: 4rem;
+            margin-left: 4rem;
+        }
+    }
 </style>

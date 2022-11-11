@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <div class="wrapper flex centered">
+    <div class="wrapper flex centered navLaptopFix">
         <RouterLink to="/commander" >
             <button ></button>
         </RouterLink>
@@ -49,6 +49,16 @@
             button{
             width: 15px;
             height: 15px;
+        }
+    }
+    @media(min-width: 1200px){
+        .navLaptopFix{
+            justify-content: left;
+            margin-top: 6rem;
+        }
+        button{
+            width: 10px;
+            height: 10px;
         }
     }
 </style>

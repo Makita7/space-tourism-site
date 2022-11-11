@@ -12,14 +12,16 @@
 
 <template>
     <div>
-        <div class="NotCel">
-            <div class="WrapperText" >
+        <div class="NotCel LaptopWrapper">
+            <div class="WrapperText DividerTwo" >
                 <p class="position">{{position}}</p>
                 <p class="name">{{name}}</p>
                 <p class="description">{{description}}</p>
+                <CrewNav/>
             </div>
-            <CrewNav/>
-            <img :alt="name" :src="img" />
+            <div class="DividerOne">
+                <img :alt="name" :src="img" />
+            </div>
         </div>
         <div class="OnlyCel">
             <img :alt="name" :src="img" />
@@ -93,6 +95,32 @@
         }
         .position{
             font-size: 1.7rem;
+        }
+    }
+    @media(min-width: 1200px){
+        .LaptopWrapper{
+            display: flex;
+        }
+        .WrapperText{
+            margin-left: 4rem;
+        }
+        .DividerOne{
+            width: 50%;
+            box-sizing: content-box;
+        }
+        .DividerTwo{
+            width: 50%;
+            text-align: left;
+        }
+        .position{
+            margin-top: 6rem;
+        }
+        .description{
+            margin-bottom: 1rem !important;
+            width: 80%;
+        }
+        img{
+            width: 60%;
         }
     }
 </style>
