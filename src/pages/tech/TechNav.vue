@@ -51,4 +51,14 @@
         background-color: rgba(255, 255, 255, 1);
         color: black;
     }
+    @media(min-width: 800px){
+        .wrapper{
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .btn{
+            padding: 1rem 1.4rem;
+            margin: 1rem 0.7rem;
+        }
+    }
 </style>

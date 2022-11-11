@@ -13,9 +13,11 @@
     <div class="card">
         <img :alt="title" :src="img" />
         <TechNav/>
-        <p class="term">THE TERMINOLOGY…</p>
-        <p class="title">{{title}}</p>
-        <p class="description">{{description}}</p>
+        <div class="TextWrapper">
+            <p class="term">THE TERMINOLOGY…</p>
+            <p class="title">{{title}}</p>
+            <p class="description">{{description}}</p>
+        </div>
     </div>
 </template>
 
@@ -47,5 +49,24 @@
     }
     .card{
         margin-bottom: 5rem;
+    }
+
+    @media(min-width: 800px){
+        .TextWrapper{
+            width: 60%;
+            margin-left: 20%;
+            margin-top: 1rem;
+        }
+        .title{
+            font-size: 2.5rem;
+        }
+        .term{
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+        .description{
+            font-size: 1.1rem;
+            margin-top: 2rem;
+        }
     }
 </style>

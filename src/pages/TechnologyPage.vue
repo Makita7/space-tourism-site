@@ -9,7 +9,7 @@ import { RouterView } from 'vue-router';
 <template>
   <div class="tech">
     <div class="wrapper centered">
-      <div class="flex centered">
+      <div class="flex centered uncenter padTablet">
           <p class="num">03</p>
           <p class="pick">SPACE LAUNCH 101</p>
       </div>
@@ -51,5 +51,18 @@ import { RouterView } from 'vue-router';
 
   .route-leave-active{
       transition: all 0.3s ease-in;
+  }
+  @media(min-width: 800px){
+    .tech{
+        background-image: url('../assets/technology/background-technology-tablet.jpg');
+    }
+    .uncenter{
+        justify-content: left;
+    }
+    .padTablet{
+        margin-top: 3rem;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+    }
   }
 </style>
