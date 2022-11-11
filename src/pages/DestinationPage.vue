@@ -37,14 +37,20 @@ const Destinations = ref([
                     <p class="num">01</p>
                     <p class="pick">Pick your destination</p>
                 </div>
-                <img alt="moon" v-if="$route.fullPath == '/moon'" class="planet AFadeInTop" src="@/assets/destination/moon.png" />
-                <img v-else-if="$route.fullPath == '/europa'" class="planet AFadeInTop" src="@/assets/destination/europa.png" />
-                <img v-else-if="$route.fullPath == '/titan'" class="planet AFadeInTop" src="@/assets/destination/titan.png" />
-                <img v-else-if="$route.fullPath == '/mars'" class="planet AFadeInTop" src="@/assets/destination/mars.png" />
-                <RouterLink class="link" v-for="planets in Destinations" :to="planets.to" :key="planets.id">{{planets.name}}</RouterLink>
-                <br/>
-                <div class="centered">
-                    <router-view  class="AFadeIn tabletWrapper" :key="$route.fullPath" />
+                <div class="LaptopWrapper">
+                    <div class="DividerOne">
+                        <img alt="moon" v-if="$route.fullPath == '/moon'" class="planet AFadeInTop" src="@/assets/destination/moon.png" />
+                        <img v-else-if="$route.fullPath == '/europa'" class="planet AFadeInTop" src="@/assets/destination/europa.png" />
+                        <img v-else-if="$route.fullPath == '/titan'" class="planet AFadeInTop" src="@/assets/destination/titan.png" />
+                        <img v-else-if="$route.fullPath == '/mars'" class="planet AFadeInTop" src="@/assets/destination/mars.png" />
+                    </div>
+                    <div class="DividerTwo">
+                        <RouterLink class="link" v-for="planets in Destinations" :to="planets.to" :key="planets.id">{{planets.name}}</RouterLink>
+                        <br/>
+                        <div class="centered">
+                            <router-view  class="AFadeIn tabletWrapper" :key="$route.fullPath" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -159,6 +165,56 @@ const Destinations = ref([
         }
         :deep(.justCenter){
             justify-content: center;
+        }
+    }
+    @media(min-width:1200px){
+        .destination{
+            background-image: url('../assets/destination/background-destination-desktop.jpg');
+        }
+        .num{
+            font-size: 1.6rem;
+        }
+        .pick{
+            font-size: 1.6rem;
+            letter-spacing: 3px;
+        }
+        .padTablet{
+            margin-top: 4rem;
+            margin-left: 4rem;
+        }
+        .LaptopWrapper{
+            display: flex;
+        }
+        .DividerOne{
+            width: 50%;
+            box-sizing: content-box;
+        }
+        .planet{
+            width: 60%;
+            margin: 4rem 20%;
+        }
+        .DividerTwo{
+            width: 50%;
+            text-align: left;
+        }
+        .tabletWrapper{
+            margin-left: 0;
+            text-align: left;
+            width: 70%;
+        }
+        :deep(.justCenter){
+            justify-content: start !important;
+        }
+        :deep(.InfoWrapper){
+            padding: 0;
+            padding-right: 10%;
+        }
+        :deep(.description){
+            padding: 1rem 0;
+        }
+        :deep(.title){
+            font-size: 4.5rem;
+            margin: 3.5rem 0rem -1rem 0rem;
         }
     }
 </style>
