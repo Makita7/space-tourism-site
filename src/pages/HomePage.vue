@@ -4,19 +4,23 @@
 
 <template>
   <main class="home">
-    <div class="wrapper">
-      <p class="topP">
-        SO, YOU WANT TO TRAVEL TO
-      </p>
-      <h1>space</h1>
-      <p class="description">
-        Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
-      </p>
-      <RouterLink to="/moon">
-        <button class="AFadeIn">
-            Explore
-        </button>
-    </RouterLink>
+    <div class="wrapper CompWrap">
+      <div class="dividerOne">
+        <p class="topP">
+          SO, YOU WANT TO TRAVEL TO
+        </p>
+        <h1>space</h1>
+        <p class="description">
+          Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly out of this world experience!
+        </p>
+      </div>
+      <div class="dividerTwo">
+          <RouterLink to="/moon">
+            <button class="AFadeIn">
+                Explore
+            </button>
+        </RouterLink>
+      </div>
     </div>
   </main>
 </template>
@@ -87,6 +91,43 @@
     }
     .topP{
       padding-top: 2rem;
+    }
+  }
+  @media(min-width: 1200px) {
+    .home{
+      background-image: url('../assets/home/background-home-desktop.jpg') ;
+    }
+    .CompWrap{
+      display: flex;
+    }
+    .dividerOne{
+      width: 60%;
+      text-align: left;
+      padding-left: 8rem;
+      box-sizing: border-box;
+    }
+    .description{
+      padding: 0 10rem 0 0;
+      font-size: 1rem;
+    }
+    .topP{
+      padding-top: 10rem;
+      font-weight: 300;
+      font-size: 2rem;
+      letter-spacing: 3px;
+      padding-left: 1rem;
+    }
+    h1{
+      font-size: 9rem;
+    }
+    .description{
+      margin-top: 0;
+    }
+    button{
+      margin-top: 18rem;
+      padding: 5.5rem 3rem;
+      font-size: 1.6rem;
+      margin-left: 8rem;
     }
   }
 </style>

@@ -74,9 +74,34 @@
     .NotCel{
         content-visibility: visible;
     }
+    .OnlyLaptop{
+        content-visibility: hidden;
+    }
     @media(max-width: 800px){
         .NotCel{
         content-visibility: hidden;
+        }
+    }
+    @media(min-width: 1200px){
+        .wrapper{
+            background-color: rgba(255, 255, 255, 0.04);
+            top: 0;
+            margin-top: 0rem;
+            margin-left: 25rem;
+            width: 100%;
+            margin-right: -1rem;
+            padding-top: 2rem;
+            text-align: right;
+            padding-bottom: 2rem;
+            backdrop-filter: blur(25px);
+            padding-right: 2rem;
+        }
+        .active-link{
+            text-decoration: underline !important;
+            text-underline-offset: 2rem;
+        }
+        .logo{
+            margin-top: 0.5rem;
         }
     }
 </style>
