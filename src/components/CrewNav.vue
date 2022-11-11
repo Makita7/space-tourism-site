@@ -45,4 +45,10 @@
         opacity: 1 !important;
         color: #ffff;
     }
+    @media(min-width: 800px){
+            button{
+            width: 15px;
+            height: 15px;
+        }
+    }
 </style>

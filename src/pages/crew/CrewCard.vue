@@ -12,12 +12,23 @@
 
 <template>
     <div>
-        <img :alt="name" :src="img" />
-        <hr/>
-        <CrewNav/>
-        <p class="position">{{position}}</p>
-        <p class="name">{{name}}</p>
-        <p class="description">{{description}}</p>
+        <div class="NotCel">
+            <div class="WrapperText" >
+                <p class="position">{{position}}</p>
+                <p class="name">{{name}}</p>
+                <p class="description">{{description}}</p>
+            </div>
+            <CrewNav/>
+            <img :alt="name" :src="img" />
+        </div>
+        <div class="OnlyCel">
+            <img :alt="name" :src="img" />
+            <hr/>
+            <CrewNav/>
+            <p class="position">{{position}}</p>
+            <p class="name">{{name}}</p>
+            <p class="description">{{description}}</p>
+        </div>
     </div>
 </template>
 
@@ -54,5 +65,34 @@
         font-family: var(--Bellfair);
         font-weight: 200;
         font-size: 1.3rem;
+    }
+    .NotCel{
+        content-visibility: hidden;
+    }
+    .OnlyCel{
+        content-visibility: visible;
+    }
+
+    @media(min-width: 800px){
+        .NotCel{
+            content-visibility: visible;
+        }
+        .OnlyCel{
+            content-visibility: hidden;
+        }
+
+        .WrapperText{
+            width: 60%;
+            margin-left: 20%;
+        }
+        .name{
+            font-size: 2.5rem;
+        }
+        .description{
+            margin-bottom: 2rem !important;
+        }
+        .position{
+            font-size: 1.7rem;
+        }
     }
 </style>

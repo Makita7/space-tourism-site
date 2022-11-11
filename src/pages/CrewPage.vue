@@ -5,7 +5,7 @@
 <template>
     <div class="crew">
         <div class="wrapper centered">
-            <div class="flex centered">
+            <div class="flex centered uncenter padTablet">
                 <p class="num">02</p>
                 <p class="pick">Meet your crew</p>
             </div>
@@ -87,5 +87,18 @@
 
     .route-leave-active{
         transition: all 0.3s ease-in;
+    }
+
+    @media(min-width: 800px){
+        .crew{
+            background-image: url('../assets/crew/background-crew-tablet.jpg');
+        }
+        .uncenter{
+            justify-content: left;
+        }
+        .padTablet{
+            margin-top: 3rem;
+            margin-left: 1rem;
+        }
     }
 </style>
