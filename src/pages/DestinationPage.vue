@@ -33,7 +33,7 @@ const Destinations = ref([
     <main>
         <div class="destination">
             <div class="wrapper centered">
-                <div class="flex centered">
+                <div class="flex centered uncenter padTablet">
                     <p class="num">01</p>
                     <p class="pick">Pick your destination</p>
                 </div>
@@ -44,7 +44,7 @@ const Destinations = ref([
                 <RouterLink class="link" v-for="planets in Destinations" :to="planets.to" :key="planets.id">{{planets.name}}</RouterLink>
                 <br/>
                 <div class="centered">
-                    <router-view  class="AFadeIn" :key="$route.fullPath" />
+                    <router-view  class="AFadeIn tabletWrapper" :key="$route.fullPath" />
                 </div>
             </div>
         </div>
@@ -133,4 +133,32 @@ const Destinations = ref([
         text-transform: uppercase;
     }
 
+    @media(min-width: 800px){
+        .destination{
+            background-image: url('../assets/destination/background-destination-tablet.jpg');
+        }
+        .uncenter{
+            justify-content: left;
+        }
+        .padTablet{
+            margin-top: 3rem;
+            margin-left: 1rem;
+        }
+        .tabletWrapper{
+            width: 80%;
+            margin-left: 10%;
+        }
+        :deep(.description){
+            padding: 0 1rem;
+        }
+        :deep(.BigSFlex){
+            display: flex;
+        }
+        :deep(.InfoWrapper){
+            padding: 0 5%;
+        }
+        :deep(.justCenter){
+            justify-content: center;
+        }
+    }
 </style>
