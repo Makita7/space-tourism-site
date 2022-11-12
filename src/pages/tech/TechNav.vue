@@ -6,21 +6,21 @@
     const TechNavInfo = ref([
         {
             id: 1,
-            to: "/launchvehicle",
+            to: "/technology/launch",
         },
         {
             id: 2,
-            to: "/spacecapsule",
+            to: "/technology/spacecapsule",
         },
         {
             id: 3,
-            to: "/spaceport",
+            to: "/technology/spaceport",
         },
     ]);
 </script>
 
 <template>
-    <div class="flex wrapper">
+    <div class="flex wrapper unFlex DividerOne">
         <RouterLink v-for="item in TechNavInfo" :key="item.id" :to="item.to">
             <button class="btn">
                 {{item.id}}
@@ -59,6 +59,21 @@
         .btn{
             padding: 1rem 1.4rem;
             margin: 1rem 0.7rem;
+        }
+    }
+    @media(min-width: 1200px){
+        .unFlex{
+            display: inline-grid !important;
+        }
+        .btn{
+            padding: 1.5rem 2rem;
+            font-size: 1.3rem;
+        }
+        .DividerOne{
+            width: 10%;
+            margin-left: 5rem;
+            margin-right: 0;
+            height: fit-content;
         }
     }
 </style>

@@ -6,17 +6,21 @@
         title: String,
         img: String,
         description: String,
+        imgBig: String,
     })
 </script>
 
 <template>
-    <div class="card">
-        <img :alt="title" :src="img" />
+    <div class="card DesktopWrap">
+        <img :alt="title" :src="img" class="NotLaptop" />
         <TechNav/>
-        <div class="TextWrapper">
+        <div class="TextWrapper DividerTwo">
             <p class="term">THE TERMINOLOGY…</p>
             <p class="title">{{title}}</p>
             <p class="description">{{description}}</p>
+        </div>
+        <div class="OnlyLaptop DividerThree">
+            <img :alt="title" :src="imgBig" class="OnlyLaptop" />
         </div>
     </div>
 </template>
@@ -50,6 +54,12 @@
     .card{
         margin-bottom: 5rem;
     }
+    .NotLaptop{
+        content-visibility: visible;
+    }
+    .OnlyLaptop{
+        content-visibility: hidden;
+    }
 
     @media(min-width: 800px){
         .TextWrapper{
@@ -67,6 +77,30 @@
         .description{
             font-size: 1.1rem;
             margin-top: 2rem;
+        }
+    }
+    @media(min-width: 1200px){
+        .NotLaptop{
+            content-visibility: hidden;
+            width: 0 !important;
+        }
+        .DesktopWrap{
+            display: flex;
+        }
+        .OnlyLaptop{
+            content-visibility: visible;
+        }
+        .TextWrapper{
+            margin-left: 0%;
+        }
+        :deep(.DividerOne){
+            width: 20%;
+        }
+        .DividerTwo{
+            width: 50%;
+        }
+        .DividerThree{
+            width: 30;
         }
     }
 </style>

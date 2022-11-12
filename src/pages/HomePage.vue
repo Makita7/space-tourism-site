@@ -15,7 +15,7 @@
         </p>
       </div>
       <div class="dividerTwo">
-          <RouterLink to="/moon">
+          <RouterLink to="/destination/moon">
             <button class="AFadeIn">
                 Explore
             </button>

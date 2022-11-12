@@ -6,16 +6,16 @@
 
 <template>
     <div class="wrapper flex centered navLaptopFix">
-        <RouterLink to="/commander" >
+        <RouterLink to="/crew/commander" >
             <button ></button>
         </RouterLink>
-        <RouterLink to="/missionspecialist">
+        <RouterLink to="/crew/missionspecialist">
             <button ></button>
         </RouterLink>
-        <RouterLink to="/pilot" >
+        <RouterLink to="/crew/pilot" >
             <button ></button>
         </RouterLink>
-        <RouterLink to="/flightengineer" >
+        <RouterLink to="/crew/flightengineer" >
             <button ></button>
         </RouterLink>
     </div>

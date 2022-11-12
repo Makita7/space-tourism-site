@@ -16,22 +16,27 @@ const router = createRouter({
       component: () => import( /* webpackChunkName: "destinations" */ '@/pages/DestinationPage.vue'),
       children: [
         {
-          path: "/moon",
+          path: "",
+          name: "moonMain",
+          component: () => import( /* webpackChunkName: "moon" */ '@/pages/destinations/DestinationMoon.vue'),
+        },
+        {
+          path: "/destination/moon",
           name: "moon",
           component: () => import( /* webpackChunkName: "moon" */ '@/pages/destinations/DestinationMoon.vue'),
         },
         {
-          path: "/mars",
+          path: "/destination/mars",
           name: "mars",
           component: () => import( /* webpackChunkName: "mars" */ '@/pages/destinations/DestinationMars.vue'),
         },
         {
-          path: "/europa",
+          path: "/destination/europa",
           name: "europa",
           component: () => import( /* webpackChunkName: "europa" */ '@/pages/destinations/DestinationEuropa.vue'),
         },
         {
-          path: "/titan",
+          path: "/destination/titan",
           name: "titan",
           component: () => import( /* webpackChunkName: "titan" */ '@/pages/destinations/DestinationTitan.vue'),
         },
@@ -43,22 +48,27 @@ const router = createRouter({
       component: () => import( /* webpackChunkName: "crew" */ '@/pages/CrewPage.vue'),
       children: [
         {
-          path: '/commander',
+          path: '',
+          name: 'commanderMain',
+          component: () => import(/* webpackChunkName: "commander" */ '@/pages/crew/TheCommander.vue')
+        },
+        {
+          path: '/crew/commander',
           name: 'commander',
           component: () => import(/* webpackChunkName: "commander" */ '@/pages/crew/TheCommander.vue')
         },
         {
-          path: '/missionspecialist',
+          path: '/crew/missionspecialist',
           name: 'missionspecialist',
           component: () => import(/* webpackChunkName: "missionspecialist" */ '@/pages/crew/TheMissionSpecialist.vue')
         },
         {
-          path: '/pilot',
+          path: '/crew/pilot',
           name: 'pilot',
           component: () => import(/* webpackChunkName: "pilot" */ '@/pages/crew/ThePilot.vue')
         },
         {
-          path: '/flightengineer',
+          path: '/crew/flightengineer',
           name: 'flightengineer',
           component: () => import(/* webpackChunkName: "flight-engineer" */ '@/pages/crew/TheFlightEngineer.vue')
         },
@@ -70,17 +80,22 @@ const router = createRouter({
       component: () => import( /* webpackChunkName: "tech" */ '@/pages/TechnologyPage.vue'),
       children: [
         {
-          path: '/launchvehicle',
+          path: '',
+          name: 'launch_vehicleMain',
+          component: () => import( /* webpackChunkName: "vehicle" */ '@/pages/tech/TechLaunchVehicle.vue'),
+        },
+        {
+          path: '/technology/launch',
           name: 'launch_vehicle',
           component: () => import( /* webpackChunkName: "vehicle" */ '@/pages/tech/TechLaunchVehicle.vue'),
         },
         {
-          path: '/spacecapsule',
+          path: '/technology/spacecapsule',
           name: 'space_capsule',
           component: () => import( /* webpackChunkName: "capsule" */ '@/pages/tech/TechSpaceCapsule.vue'),
         },
         {
-          path: '/spaceport',
+          path: '/technology/spaceport',
           name: 'space_port',
           component: () => import( /* webpackChunkName: "port" */ '@/pages/tech/TechSpaceport.vue'),
         },

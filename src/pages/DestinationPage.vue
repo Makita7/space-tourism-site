@@ -7,22 +7,22 @@ const Destinations = ref([
     {
         id: 1,
         name: "moon",
-        to: "/moon"
+        to: "/destination/moon"
     },
     {
         id: 2,
         name: "mars",
-        to: "/mars"
+        to: "/destination/mars"
     },
     {
         id: 3,
         name: "europa",
-        to: "/europa"
+        to: "/destination/europa"
     },
     {
         id: 4,
         name: "titan",
-        to: "/titan"
+        to: "/destination/titan"
     }
 ]);
 
@@ -39,10 +39,11 @@ const Destinations = ref([
                 </div>
                 <div class="LaptopWrapper">
                     <div class="DividerOne">
-                        <img alt="moon" v-if="$route.fullPath == '/moon'" class="planet AFadeInTop" src="@/assets/destination/moon.png" />
-                        <img v-else-if="$route.fullPath == '/europa'" class="planet AFadeInTop" src="@/assets/destination/europa.png" />
-                        <img v-else-if="$route.fullPath == '/titan'" class="planet AFadeInTop" src="@/assets/destination/titan.png" />
-                        <img v-else-if="$route.fullPath == '/mars'" class="planet AFadeInTop" src="@/assets/destination/mars.png" />
+                        <img alt="moon" v-if="$route.fullPath == '/destination/moon'" class="planet AFadeInTop" src="@/assets/destination/moon.png" />
+                        <img v-else-if="$route.fullPath == '/destination/europa'" class="planet AFadeInTop" src="@/assets/destination/europa.png" />
+                        <img v-else-if="$route.fullPath == '/destination/titan'" class="planet AFadeInTop" src="@/assets/destination/titan.png" />
+                        <img v-else-if="$route.fullPath == '/destination/mars'" class="planet AFadeInTop" src="@/assets/destination/mars.png" />
+                        <img alt="moon" v-else class="planet AFadeInTop" src="@/assets/destination/moon.png" />
                     </div>
                     <div class="DividerTwo">
                         <RouterLink class="link" v-for="planets in Destinations" :to="planets.to" :key="planets.id">{{planets.name}}</RouterLink>
