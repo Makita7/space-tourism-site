@@ -129,5 +129,16 @@
       font-size: 1.6rem;
       margin-left: 8rem;
     }
+    @media(min-width: 1800px) {
+      .description{
+        padding: 0 18rem 0 0;
+      }
+      button{
+        margin-top: 26rem;
+      }
+      .dividerOne{
+        padding-left: 12rem;
+      }
+    }
   }
 </style>

@@ -218,4 +218,16 @@ const Destinations = ref([
             margin: 3.5rem 0rem -1rem 0rem;
         }
     }
+    @media(min-width: 1800px){
+        .planet{
+            width: 50%;
+            margin: 4rem 25%;
+        }
+        .DividerTwo{
+            margin-top: 5rem;
+        }
+        .WrapperText{
+            margin-left: 11rem;
+        }
+    }
 </style>
