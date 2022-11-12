@@ -37,9 +37,14 @@
         background-color: #fff;
         background-clip: padding-box;
         border: 0;
-        opacity: .5;
+        opacity: .4;
         transition: opacity .6s ease;
         border-radius: 10px !important;
+        transition: 0.5s ease-in-out;
+    }
+
+    button:hover{
+        opacity: 0.7;
     }
     .active-link button{
         opacity: 1 !important;

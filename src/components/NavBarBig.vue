@@ -33,7 +33,7 @@
             <img class="logo" alt="logo" src='../assets/shared/logo.svg' />
         </RouterLink>
         <div class="wrapper">
-            <RouterLink v-for="data of navbarData" :key="data.id" :to="data.to">{{data.name}}</RouterLink>
+            <RouterLink v-for="data of navbarData" :key="data.id" :to="data.to" class="linkHover">{{data.name}}</RouterLink>
         </div>
     </div>
 </template>
@@ -77,10 +77,20 @@
     .OnlyLaptop{
         content-visibility: hidden;
     }
+    .linkHover{
+        transition: 0.5s ease-in-out;
+    }
+    .linkHover:hover{
+        text-decoration-color: rgba(255, 255, 255, 0.5) !important;
+        text-decoration: underline !important;
+        text-underline-offset: 3rem;
+        opacity: 0.5;
+    }
     @media(max-width: 800px){
         .NotCel{
         content-visibility: hidden;
         }
+
     }
     @media(min-width: 1200px){
         .wrapper{
@@ -98,10 +108,17 @@
         }
         .active-link{
             text-decoration: underline !important;
-            text-underline-offset: 2rem;
+            text-underline-offset: 2.1rem;
         }
         .logo{
             margin-top: 0.5rem;
+        }
+        .linkHover:hover{
+            text-decoration-color: rgba(255, 255, 255, 0.5) !important;
+            text-decoration: underline !important;
+            text-underline-offset: 2.1rem;
+            opacity: 0.5;
+            transition: 0.3s;
         }
     }
 </style>

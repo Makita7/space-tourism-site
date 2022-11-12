@@ -1,5 +1,5 @@
 <script setup>
-    import CrewNav from '../../components/CrewNav.vue';
+    import CrewNav from './CrewNav.vue';
 
     defineProps({
         name: String,
@@ -102,7 +102,7 @@
             display: flex;
         }
         .WrapperText{
-            margin-left: 4rem;
+            margin-left: 8rem;
         }
         .DividerOne{
             width: 50%;

@@ -114,7 +114,7 @@
         }
         .padTablet{
             margin-top: 4rem;
-            margin-left: 4rem;
+            margin-left: 8rem;
         }
     }
 </style>

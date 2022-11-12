@@ -85,6 +85,10 @@
       margin-top: 6rem;
       padding: 6rem 2.5rem;
       font-size: 2.3rem;
+      outline-offset: -1px;
+      outline: 0px solid #ffffff;
+      outline-color: #ffffff4a;
+      transition: 0.5s ease-in-out;
     }
     .home{
       background-image: url('../assets/home/background-home-tablet.jpg') ;
@@ -93,6 +97,12 @@
       padding-top: 2rem;
     }
   }
+  button:hover{
+    outline-offset: -1px;
+    outline: 45px solid #ffffff;
+    outline-color: #ffffff4a;
+  }
+
   @media(min-width: 1200px) {
     .home{
       background-image: url('../assets/home/background-home-desktop.jpg') ;

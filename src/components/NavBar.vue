@@ -4,7 +4,7 @@
     import { onMounted, ref, watch } from "vue";
 import NavBarBig from "./NavBarBig.vue";
 
-    const navbarData = [
+const navbarData = [
     {
         name: "home",
         id: 1,
@@ -13,17 +13,17 @@ import NavBarBig from "./NavBarBig.vue";
     {
         name: "destination",
         id: 2,
-        to: "/moon"
+        to: "/destination"
     },
     {
         name: "crew",
         id: 3,
-        to: "/commander"
+        to: "/crew"
     },
     {
         name: "technology",
         id: 4,
-        to: "/launchvehicle"
+        to: "/technology"
     }
 ]
 

@@ -83,6 +83,15 @@ const Destinations = ref([
         color: var(--inactiveColor);
         font-weight: 300;
         letter-spacing: 0.2rem;
+        padding: 0 0.2rem 0.5rem 0.2rem;
+        margin: 0 1rem;
+        transition: 0.5s ease-in-out;
+    }
+
+    .link:hover{
+        color: white;
+        border-bottom: 3px solid rgb(255, 255, 255);
+        opacity: 0.3;
     }
     .active-link{
         color: white;
@@ -181,7 +190,7 @@ const Destinations = ref([
         }
         .padTablet{
             margin-top: 4rem;
-            margin-left: 4rem;
+            margin-left: 8rem;
         }
         .LaptopWrapper{
             display: flex;

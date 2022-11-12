@@ -1,35 +1,37 @@
-# space-tourism-site
+# Space Tourism Site
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a solution to a challange on FrontendMentor that I did to challange myself with Vue.
 
-## Recommended IDE Setup
+[Challange Link](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3/hub/space-tourism-multipage-website-wQcj4M7w2H)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### The Challenge
 
-## Customize configuration
+Users should be able to:
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- View the optimal layout for each of the website's pages depending on their device's screen size
+- See hover states for all interactive elements on the page
+- View each page and be able to toggle between the tabs to see new information
+### Screenshot
 
-## Project Setup
+![](./src/assets/preview.jpg)
 
-```sh
-pnpm install
-```
+## Links
+- Solution URL: [Space Tourism](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3/hub/space-tourism-site-vue-js-gsiU-AWJu6)
+- Site: [Space Tourism](https://makita7.github.io/space-tourism-site/)
 
-### Compile and Hot-Reload for Development
+## Built With
+- [Vue](https://vuejs.org/) - JS library
+- Vue Router 4
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- FontAwesome
 
-```sh
-pnpm dev
-```
-
-### Compile and Minify for Production
-
-```sh
-pnpm build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
+### How to Use Project
+- git clone https://github.com/Makita7/space-tourism-site.git
+- cd sunnyside-frontendmendtor
+- pnpm install
+- pnpm run dev
+## Author
+<!-- - Website - [Add your name here](https://www.your-site.com) -->
+- Frontend Mentor - [@Makita7](https://www.frontendmentor.io/profile/Makita7)

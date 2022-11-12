@@ -42,10 +42,15 @@
         padding: 0.7rem 1rem;
         border-radius: 50px;
         border-width: 2px;
-        color: white;
+        color: rgba(255, 255, 255, 0.4);
         font-family: 'Bellefair', serif;
         font-size: 1rem;
         font-weight: 600;
+        transition: 0.5s ease-in-out;
+        border-style: solid;
+    }
+    .btn:hover{
+        border-color: rgba(255, 255, 255, 0.7);
     }
     .active-link .btn{
         background-color: rgba(255, 255, 255, 1);
