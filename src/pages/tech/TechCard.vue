@@ -89,6 +89,7 @@
         }
         .OnlyLaptop{
             content-visibility: visible;
+            margin-top: -1.5rem;
         }
         .TextWrapper{
             margin-left: 0%;
@@ -101,6 +102,22 @@
         }
         .DividerThree{
             width: 30;
+        }
+        .description{
+            font-size: 1rem;
+            margin-top: 2rem;
+            text-align: left;
+            width: 70%;
+        }
+        .title{
+            text-align: left;
+        }
+        .term{
+            text-align: left;
+        }
+        .card{
+            margin-bottom: 1.5rem;
+            margin-top: 5rem;
         }
     }
 </style>
