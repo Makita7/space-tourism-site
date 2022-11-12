@@ -99,6 +99,9 @@
         }
         .DividerTwo{
             width: 50%;
+            text-align: left;
+            padding-left: 3rem;
+            box-sizing: border-box;
         }
         .DividerThree{
             width: 30;
